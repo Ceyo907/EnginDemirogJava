@@ -12,6 +12,7 @@ public class _01_ClassesWithAttributes {
 
 
 
+
         ProductManager productManager=new ProductManager();
         productManager.Add(product);
         System.out.println(product.getKod());

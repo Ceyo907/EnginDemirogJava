@@ -2,14 +2,15 @@ package EnginDemiroğJavaGun02Odev._09_ClassesWithAttributes;
 
 public class Product {
 
+    //Constructor:classın kendi ismi
     public Product(int id,String name, String description,double price,int stockAmount,String renk){
         System.out.println("Yapıcı blok çalıştı");
         this.id=id;
-        this.renk=renk;
-        this.name=name;
-        this.price=price;
-        this.description=description;
-        this.stockAmount=stockAmount;
+        this.setRenk(renk);
+        this.setName(name);
+        this.setPrice(price);
+        this.setDescription(description);
+        this.setStockAmount(stockAmount);
 
     }
 
@@ -19,7 +20,7 @@ public class Product {
     }
 
     //attribute | field
-     int id;  //Sadece tanımlandığı blokta geçerlidir.(Product Bloğu)
+     private int id;  //Sadece tanımlandığı blokta geçerlidir.(Product Bloğu)
      private String name;
      private String description;
      private double price;
@@ -36,7 +37,7 @@ public class Product {
 
     //setter
     public void setId(int id) { // parametre olarak verilmeli
-        this.id = id; // this. == içerisinde bulunduğum class -->product
+        this.id= id; // this. == içerisinde bulunduğum class -->product
     }
 
 
@@ -81,8 +82,10 @@ public class Product {
     }
 
     public String getKod() {
-        return this.name.substring(0,1) + id;
+        return this.name.substring(0,1)+id;
     }
 
-
+    public void setKod(String kod) {
+        this.kod = kod;
+    }
 }

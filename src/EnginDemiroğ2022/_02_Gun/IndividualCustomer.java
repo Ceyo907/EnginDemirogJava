@@ -19,4 +19,9 @@ public class IndividualCustomer extends Customer{//Sen bir müşterisin
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+
+
+
+
 }
