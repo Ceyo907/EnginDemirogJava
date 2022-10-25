@@ -1,0 +1,44 @@
+package EnginDemirogJavaGun02Odev._07_Methods;
+
+public class _01_Methods {
+    //DRY Don't Repeat Yourself
+    //Kodlar kısa,basit ve sadece bir işi yapacak şekilde tasarlanmalıdır.
+
+    public static void main(String[] args) {
+        sayiBulmaca();  //MAin methoduna sayi bulmacayı çağırdık
+        sayiBulmaca();
+        sayiBulmaca();
+        sayiBulmaca();
+
+
+        }
+
+        public static void sayiBulmaca() {
+            int[] sayilar=new int[]{1,2,5,7,9,0};
+            int aranacak=6 ;
+
+            boolean varMi=false;
+            for (int sayi: sayilar){
+                if (sayi==aranacak){
+                    varMi=true;
+                    break;
+                }
+
+        }
+        String mesaj="";
+        if (varMi){
+
+            mesaj="Sayı mevcuttur :" + aranacak;
+            mesajVer(mesaj);
+        }else {
+            mesajVer("Sayı mevcut değildir :" + aranacak);
+        }
+
+    }
+
+    public static void mesajVer(String mesaj){      //Parametreli Method
+        System.out.println(mesaj);
+
+    }
+
+}
